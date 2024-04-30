@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade de casa preço do produto</title>
+</head>
+<body>
+    <h1>Preço de um produto final</h1>
+    <p>produto: <span id="produto"></span></p>
+    <p>preco: <span id="preco"></span></p>
+    <p>taxa de imposto: <span id="taxaimposto"></span></p>
+    <p>taxa do distruibuidor: <span id="taxadistribuidor"></span></p>
+    <p>preço final: <span id="precofinal"></span></p>
+
+    <script>
+        let produto;
+        let preco;
+        let taxaimposto;
+        let taxadistribuidor;
+        let precofinal; 
+
+        produto = prompt("Digite o nome do produto")
+        preco = Number(prompt("Digite o preço de custo"))
+        taxaimposto = Number(prompt("Digite o valor da taxa de imposto em porcentagem número inteiro"))
+        taxadistribuidor = Number(prompt("Digite o valor da taxa do distribuidor em porcentagem número inteiro"))
+
+        taxaimposto = (taxaimposto / 100) * preco;
+        taxadistribuidor = (taxadistribuidor / 100) * preco
+
+
+        precofinal = preco + taxaimposto + taxadistribuidor
+
+    document.getElementById("produto").innerHTML = produto
+    document.getElementById("custo").innerHTML = preco
+    document.getElementById("taxaimposto").innerHTML = taxaimposto
+    document.getElementById("taxadistribuidor").innerHTML = taxadistribuidor
+    document.getElementById("precofinal").innerHTML = precofinal
+    </script>
+
+</body>
+</html>
